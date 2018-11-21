@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-global-error-handler';
+
+  public clickToThrow(): void {
+    throw new Error('You should have not clicked this button...');
+  }
 }
