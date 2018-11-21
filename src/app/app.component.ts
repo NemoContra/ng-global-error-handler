@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SilentReportableError } from './silent-reportable-error';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,6 @@ export class AppComponent {
   title = 'ng-global-error-handler';
 
   public clickToThrow(): void {
-    throw new Error('You should have not clicked this button...');
+    throw new SilentReportableError('You should have not clicked this button...', true);
   }
 }
